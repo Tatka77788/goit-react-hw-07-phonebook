@@ -18,7 +18,7 @@ const fetchContacts = () => dispatch => {
   axios
     .get('/contacts')
     .then(({ data }) => dispatch(contactsActions.fetchContactsSuccess(data)))
-    .catch(error => dispatch(contactsActions.addContactsError(error)));
+    .catch(error => dispatch(contactsActions.fetchContactsError(error)));
 };
 
 const deleteContact = id => dispatch => {
